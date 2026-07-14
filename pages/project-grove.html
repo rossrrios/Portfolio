@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title data-es="Grove — Rosana Ríos" data-en="Grove — Rosana Ríos">Grove — Rosana Ríos</title>
+    <meta name="description" content="Caso de estudio UX/UI: Workspace de estudio que reduce distracciones con planificación, enfoque y progreso en un solo espacio.">
+    <meta name="theme-color" content="#2563eb">
+    <meta property="og:title" content="Grove — Rosana Ríos">
+    <meta property="og:description" content="UX/UI case study: Study workspace that reduces distractions with planning, focus, and progress in one space.">
+    <meta property="og:type" content="article">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#problem" class="skip-link">Saltar al contenido</a>
+    <nav class="sidebar" aria-label="Menú principal">
+        <a href="../index.html#hero" data-es="INICIO" data-en="HOME">INICIO</a>
+        <a href="../index.html#projects" data-es="PROYECTOS" data-en="PROJECTS">PROYECTOS</a>
+        <a href="../index.html#about" data-es="SOBRE MÍ" data-en="ABOUT">SOBRE MÍ</a>
+        <a href="../index.html#contact" data-es="CONTACTO" data-en="CONTACT">CONTACTO</a>
+    </nav>
+
+    <div class="project-topbar">
+        <a href="../index.html" class="back-button" data-es="← Portfolio" data-en="← Portfolio">← Portfolio</a>
+        <div class="project-topbar-right">
+            <button type="button" class="theme-toggle-project" id="themeToggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <div class="language-switcher" role="group" aria-label="Selector de idioma">
+                <button type="button" class="lang-btn active" data-lang="es" aria-label="Español">ES</button>
+                <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="project-hero">
+        <p class="project-category" data-es="UX/UI Design · Producto" data-en="UX/UI Design · Product">UX/UI Design · Producto</p>
+        <div class="project-title-row">
+            <h1 class="project-title">Grove</h1>
+            <a href="https://rossrrios.github.io/Grove/" target="_blank" rel="noopener noreferrer" class="live-demo-btn" data-es="Live Demo" data-en="Live Demo">
+                <span>Live Demo</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+        </div>
+        <p class="project-description" data-es="Workspace de estudio que reduce las distracciones al reunir planificación, enfoque y progreso en un solo espacio personalizable." data-en="A study workspace that reduces distractions by bringing planning, focus, and progress into one customizable space.">Workspace de estudio que reduce las distracciones al reunir planificación, enfoque y progreso en un solo espacio personalizable.</p>
+        <div class="project-hero-mockup">
+            <div class="mockup-placeholder"><img src="../assets/images/grove/grove-mockup.webp" alt="Grove task management view" loading="lazy" /></div>
+        </div>
+    </section>
+
+    <div class="project-layout">
+        <main class="project-main">
+
+            <!-- 2. THE PROBLEM -->
+            <div class="project-section" id="problem">
+                <h2 data-es="El Problema" data-en="The Problem">El Problema</h2>
+                <p class="section-intro" data-es="Los estudiantes cambian entre 4+ apps para organizar su estudio: calendario, notas, temporizador y apps de flashcards. Cambiar constantemente entre aplicaciones aumenta las distracciones y dificulta mantener el enfoque." data-en="Students switch between 4+ apps to organize their study: calendar, notes, timer, and flashcard apps. Constantly switching between apps increases distractions and makes it harder to stay focused.">Los estudiantes cambian entre 4+ apps para organizar su estudio: calendario, notas, temporizador y apps de flashcards. Cambiar constantemente entre aplicaciones aumenta las distracciones y dificulta mantener el enfoque.</p>
+                <div class="comparison-layout">
+                    <div class="comparison-side comparison-before">
+                        <span class="comparison-label" data-es="Antes" data-en="Before">Antes</span>
+                        <div class="comparison-mockup"><img src="../assets/images/grove/before-mockup.webp" alt="Before: Multiple disconnected apps" loading="lazy" /></div>
+                        <p data-es="Calendario · Notas · Temporizador · Flashcards · Spreadsheet de progreso" data-en="Calendar · Notes · Timer · Flashcards · Progress spreadsheet">Calendario · Notas · Temporizador · Flashcards · Spreadsheet de progreso</p>
+                    </div>
+                    <div class="comparison-arrow" aria-hidden="true">→</div>
+                    <div class="comparison-side comparison-after">
+                        <span class="comparison-label" data-es="Con Grove" data-en="With Grove">Con Grove</span>
+                        <div class="comparison-mockup"><img src="../assets/images/grove/after-mockup.webp" alt="With Grove: Unified workspace" loading="lazy" /></div>
+                        <p data-es="Todo en un solo espacio: planificación, estudio, progreso" data-en="Everything in one space: planning, study, progress">Todo en un solo espacio: planificación, estudio, progreso</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. DESIGN GOAL -->
+            <div class="project-section" id="goal">
+                <h2 data-es="Objetivo de Diseño" data-en="Design Goal">Objetivo de Diseño</h2>
+                <div class="goal-layout">
+                    <div class="goal-text">
+                        <p data-es="Crear una experiencia de estudio flexible y sin distracciones donde se reuniera las herramientas esenciales de productividad sin imponer una única forma de estudiar" data-en="The goal was to create a flexible workspace that combines essential productivity tools without forcing users into a single study method.">Crear una experiencia de estudio flexible y sin distracciones donde se reuniera las herramientas esenciales de productividad sin imponer una única forma de estudiar.</p>
+                    </div>
+                    <div class="goal-mockup">
+                        <div class="mockup-placeholder"><img src="../assets/images/grove/grove-mockup3.webp" alt="Grove design goal"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. FROM IDEA TO INTERFACE -->
+            <div class="project-section" id="process">
+                <h2 data-es="De Idea a Interfaz" data-en="From Idea to Interface">De Idea a Interfaz</h2>
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-phase" data-es="Wireframes" data-en="Wireframes">Wireframes</span>
+                            <h3 data-es="Baja fidelidad" data-en="Low fidelity">Baja fidelidad</h3>
+                            <p data-es="Exploración de layouts, flujos de navegación y estructura de boards. 12 configuraciones descartadas antes de llegar a la dirección correcta." data-en="Layout exploration, navigation flows, and board structure. 12 configurations discarded before finding the right direction.">Exploración de layouts, flujos de navegación y estructura de boards. 12 configuraciones descartadas antes de llegar a la dirección correcta.</p>
+                            <div class="timeline-mockup"><img src="../assets/images/grove/wireframe-dashboard.png" alt="Low-fidelity wireframes"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-phase" data-es="Med-Fi" data-en="Mid-Fi">Med-Fi</span>
+                            <h3 data-es="Conceptos intermedios" data-en="Mid-fidelity concepts">Conceptos intermedios</h3>
+                            <p data-es="Sistema de colores, tipografía, componentes reutilizables y primeros prototipos clickeables para validar la dirección visual." data-en="Color system, typography, reusable components, and first clickable prototypes to validate the visual direction.">Sistema de colores, tipografía, componentes reutilizables y primeros prototipos clickeables para validar la dirección visual.</p>
+                            <div class="timeline-mockup"><img src="../assets/images/grove/grove-midfi.png" alt="Mid-fidelity concepts"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-phase" data-es="Final" data-en="Final">Final</span>
+                            <h3 data-es="UI pulida" data-en="Polished UI">UI pulida</h3>
+                            <p data-es="Alta fidelidad con design system completo, componentes documentados, specs de interacción y handoff listo." data-en="High fidelity with complete design system, documented components, interaction specs, and handoff-ready.">Alta fidelidad con design system completo, componentes documentados, specs de interacción y handoff listo.</p>
+                            <div class="timeline-mockup"><img src="../assets/images/grove/grove-finalui.png" alt="Final Grove UI"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. KEY FEATURES -->
+            <div class="project-section" id="features">
+                <h2 data-es="Funciones Clave" data-en="Key Features">Funciones Clave</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-mockup"><img src="../assets/images/grove/grove-boards.png" alt="Grove personalizable boards"></div>
+                        <h3 data-es="Boards Personalizables" data-en="Custom Boards">Boards Personalizables</h3>
+                        <p data-es="Cada estudiante crea su propio workspace con los widgets que necesita: lista de tareas, calendario, notas o flashcards." data-en="Each student creates their own workspace with the widgets they need: task list, calendar, notes, or flashcards.">Cada estudiante crea su propio workspace con los widgets que necesita: lista de tareas, calendario, notas o flashcards.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-mockup"><img src="../assets/images/grove/grove-boards3.png" alt="Grove focus modes"></div>
+                        <h3 data-es="Modos de Enfoque" data-en="Focus Modes">Modos de Enfoque</h3>
+                        <p data-es="Pomodoro integrado y Focus Time que oculta todo lo no esencial. Timer, objetivo de sesión y bloqueo de distracciones." data-en="Built-in Pomodoro and Focus Time that hides everything non-essential. Timer, session goal, and distraction blocking.">Pomodoro integrado y Focus Time que oculta todo lo no esencial. Timer, objetivo de sesión y bloqueo de distracciones.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-mockup"><img src="../assets/images/grove/grove-boards2.png" alt="Grove statistics dashboard"></div>
+                        <h3 data-es="Estadísticas" data-en="Statistics">Estadísticas</h3>
+                        <p data-es="Gráficos de progreso semanal, tiempo de estudio por materia y rachas de actividad para mantener la motivación." data-en="Weekly progress charts, study time per subject, and activity streaks to maintain motivation.">Gráficos de progreso semanal, tiempo de estudio por materia y rachas de actividad para mantener la motivación.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-mockup"><img src="../assets/images/grove/grove-finalui.png" alt="Grove personalization options"></div>
+                        <h3 data-es="Personalización" data-en="Personalization">Personalización</h3>
+                        <p data-es="Temas, layouts y organizadores flexibles. El workspace se adapta al estilo de estudio de cada estudiante." data-en="Themes, layouts, and flexible organizers. The workspace adapts to each student's study style.">Temas, layouts y organizadores flexibles. El workspace se adapta al estilo de estudio de cada estudiante.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. DESIGN DECISIONS -->
+            <div class="project-section" id="decisions">
+                <h2 data-es="Producto Final" data-en="Final Product">Producto Final</h2>
+                <div class="decision-layout">
+                    <div class="decision-text">
+                        <img src="../assets/images/grove/grove-boards.png" alt="Grove boards feature" class="decision-mockup-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. FUTURE VISION -->
+            <div class="project-section" id="future">
+                <h2 data-es="Visión Futura" data-en="Future Vision">Visión Futura</h2>
+                <div class="future-card">
+                    <div class="future-badge" data-es="Concepto" data-en="Concept">Concepto</div>
+                    <div class="future-layout">
+                        <div class="future-text">
+                            <h3 data-es="Creación de Boards con IA" data-en="AI-Assisted Board Creation">Creación de Boards con IA</h3>
+                            <p data-es="El estudiante describe su materia y objetivos de estudio. La IA genera un board optimizado con widgets sugeridos, horarios recomendados y plantillas específicas para esa materia." data-en="The student describes their subject and study goals. The AI generates an optimized board with suggested widgets, recommended schedules, and subject-specific templates.">El estudiante describe su materia y objetivos de estudio. La IA genera un board optimizado con widgets sugeridos, horarios recomendados y plantillas específicas para esa materia.</p>
+                        </div>
+                        <div class="future-mockup">
+                            <div class="mockup-placeholder"><img src="../assets/images/grove/grove-ia.png" alt="Grove boards feature"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. REFLECTION -->
+            <div class="project-section" id="reflection">
+                <h2 data-es="Reflexión" data-en="Reflection">Reflexión</h2>
+                <div class="reflection-content">
+                    <p data-es="Grove me enseñó que la mejor herramienta de productividad es la que se adapta al usuario — no al revés. Diseñar para múltiples estilos de estudio me obligó a pensar en flexibilidad desde el primer boceto y a cuestionar constantemente qué debía ser una decisión del sistema y qué debía quedar en manos del usuario." data-en="Grove taught me that the best productivity tool is the one that adapts to the user — not the other way around. Designing for different study styles pushed me to think about flexibility from the very first sketch and constantly question which decisions should be made by the system and which should remain in the user's hands.">Grove me enseñó que la mejor herramienta de productividad es la que se adapta al usuario — no al revés. Diseñar para múltiples estilos de estudio me obligó a pensar en flexibilidad desde el primer boceto y a cuestionar constantemente qué debía ser una decisión del sistema y qué debía quedar en manos del usuario.</p>
+                    <p data-es="El mayor desafío fue equilibrar simplicidad con personalización: suficiente estructura para orientar, suficiente libertad para que cada persona pudiera hacer suyo el espacio. Este proyecto fortaleció mi capacidad para diseñar experiencias completas, llevando una idea desde la exploración inicial hasta un producto funcional sin perder de vista la experiencia del usuario." data-en="The biggest challenge was balancing simplicity with personalization: enough structure to provide guidance, enough freedom to make the workspace feel personal. This project strengthened my ability to design complete experiences, taking an idea from early exploration to a functional product while keeping the user experience at the center of every decision.">El mayor desafío fue equilibrar simplicidad con personalización: suficiente estructura para orientar, suficiente libertad para que cada persona pudiera hacer suyo el espacio. Este proyecto fortaleció mi capacidad para diseñar experiencias completas, llevando una idea desde la exploración inicial hasta un producto funcional sin perder de vista la experiencia del usuario.</p>
+                </div>
+                <div class="reflection-mockup">
+                    <div class="mockup-placeholder mockup-large" data-es="Mockup final de Grove" data-en="Final Grove mockup">Mockup final de Grove</div>
+                </div>
+            </div>
+
+        </main>
+
+        <aside class="project-sidebar">
+            <h2 data-es="Resumen Proyecto" data-en="Project Overview">Resumen Proyecto</h2>
+            <div class="sidebar-card">
+                <h3 data-es="Rol" data-en="Role">Rol</h3>
+                <ul>
+                    <li data-es="UI/UX Design" data-en="UI/UX Design">UI/UX Design</li>
+                    <li data-es="Product Design" data-en="Product Design">Product Design</li>
+                    <li data-es="Visual Design" data-en="Visual Design">Visual Design</li>
+                    <li data-es="Front-End Development" data-en="Front-End Development">Front-End Development</li>
+                </ul>
+            </div>
+            <div class="sidebar-card">
+                <h3 data-es="Duración" data-en="Duration">Duración</h3>
+                <ul>
+                    <li data-es="2 semanas" data-en="2 weeks">2 semanas</li>
+                </ul>
+            </div>
+            <div class="sidebar-card">
+                <h3 data-es="Herramientas" data-en="Tools">Herramientas</h3>
+                <div>
+                    <span class="sidebar-tag">Figma</span>
+                    <span class="sidebar-tag">HTML</span>
+                    <span class="sidebar-tag">CSS</span>
+                    <span class="sidebar-tag">JavaScript</span>
+                    <span class="sidebar-tag">GitHub</span>
+                </div>
+            </div>
+            <div class="sidebar-card">
+                <h3 data-es="Deliverables" data-en="Deliverables">Deliverables</h3>
+                <ul>
+                    <li data-es="Wireframes" data-en="Wireframes">Wireframes</li>
+                    <li data-es="User Flows" data-en="User Flows">User Flows</li>
+                    <li data-es="High-Fidelity Mockups" data-en="High-Fidelity Mockups">High-Fidelity Mockups</li>
+                    <li data-es="Interactive Prototype" data-en="Interactive Prototype">Interactive Prototype</li>
+                    <li data-es="Design System" data-en="Design System">Design System</li>
+                </ul>
+            </div>
+            <div class="sidebar-card">
+                <h3 data-es="Ver más" data-en="View more">Ver más</h3>
+                <ul>
+                    <li><a href="project-marea.html" class="sidebar-link" data-es="MAREA" data-en="MAREA">MAREA</a></li>
+                    <li><a href="project-afterglow.html" class="sidebar-link" data-es="Afterglow" data-en="Afterglow">Afterglow</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="../js/project.js"></script>
+</body>
+</html>

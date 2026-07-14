@@ -1,0 +1,566 @@
+/* ============================================
+   MAREA — Project Page Styles
+   Premium editorial layout for brand case study
+   ============================================ */
+
+/* ------------------------------------------
+   Challenge Cards
+   ------------------------------------------ */
+
+.challenge-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.challenge-card {
+    padding: 28px;
+    border-radius: 12px;
+    background: var(--bg-secondary, #f8f8f8);
+    border: 1px solid var(--card-border, #f0f0f0);
+}
+
+.challenge-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent, #2563eb);
+    margin-bottom: 12px;
+}
+
+.challenge-card p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text-secondary, #555);
+    margin: 0;
+}
+
+/* ------------------------------------------
+   Creative Direction Grid
+   ------------------------------------------ */
+
+.direction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.direction-card {
+    padding: 24px;
+    border-radius: 12px;
+    background: var(--bg-secondary, #f8f8f8);
+    border: 1px solid var(--card-border, #f0f0f0);
+}
+
+.direction-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent, #2563eb);
+    margin-bottom: 10px;
+}
+
+.direction-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-secondary, #555);
+    margin: 0;
+}
+
+/* ------------------------------------------
+   Menu Tri-Fold Section
+   ------------------------------------------ */
+
+.menu-trifold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 48px 0 64px;
+    perspective: 1200px;
+}
+
+.menu-card {
+    position: relative;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        0 24px 48px rgba(0, 0, 0, 0.12);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                z-index 0s;
+}
+
+.menu-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.menu-card-1 {
+    transform: rotateY(8deg) translateX(24px);
+    z-index: 1;
+}
+
+.menu-card-2 {
+    transform: translateY(-12px);
+    z-index: 3;
+}
+
+.menu-card-3 {
+    transform: rotateY(-8deg) translateX(-24px);
+    z-index: 2;
+}
+
+.menu-card:hover {
+    transform: rotateY(0deg) translateY(-24px) scale(1.05);
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.18),
+        0 48px 80px rgba(0, 0, 0, 0.22);
+    z-index: 10;
+}
+
+.menu-trifold:hover .menu-card:not(:hover) {
+    filter: brightness(0.85);
+}
+
+/* ------------------------------------------
+   Stories Phone Mockup
+   ------------------------------------------ */
+
+.stories-phone-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0 56px;
+}
+
+.phone-mockup {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    border-radius: 40px;
+    background: #1a1a1a;
+    padding: 12px;
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        0 28px 56px rgba(0, 0, 0, 0.16),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+
+.phone-notch {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 28px;
+    background: #1a1a1a;
+    border-radius: 0 0 18px 18px;
+    z-index: 20;
+}
+
+.phone-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Stories Progress Bars */
+.stories-progress {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    right: 14px;
+    display: flex;
+    gap: 4px;
+    z-index: 15;
+}
+
+.stories-progress-bar {
+    flex: 1;
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.stories-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: #fff;
+    border-radius: 2px;
+    transition: width 0.1s linear;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
+.stories-progress-bar.filled::after {
+    width: 100%;
+}
+
+.stories-progress-bar.active::after {
+    animation: storyProgress 4.5s linear forwards;
+}
+
+@keyframes storyProgress {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+/* Story Slides */
+.stories-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.story-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.story-slide.active {
+    opacity: 1;
+}
+
+.story-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Tap areas */
+.stories-tap-left,
+.stories-tap-right {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    width: 40%;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.stories-tap-left {
+    left: 0;
+}
+
+.stories-tap-right {
+    right: 0;
+    width: 60%;
+}
+
+/* Story navigation hint */
+.stories-nav-hint {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    z-index: 12;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.stories-nav-hint.hidden {
+    opacity: 0;
+}
+
+.stories-nav-hint svg {
+    opacity: 0.8;
+}
+
+/* ------------------------------------------
+   Process Timeline — Wider text
+   ------------------------------------------ */
+
+.process-timeline {
+    position: relative;
+    padding-left: 28px;
+    margin-top: 24px;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border, #e0e0e0);
+}
+
+.process-step {
+    display: block;
+    position: relative;
+    padding-bottom: 32px;
+    padding-left: 8px;
+}
+
+.process-step:last-child {
+    padding-bottom: 0;
+}
+
+.process-marker {
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent, #2563eb);
+    border: 2px solid var(--bg-primary, #fff);
+    box-shadow: 0 0 0 2px var(--accent, #2563eb);
+}
+
+.process-phase {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent, #2563eb);
+    margin-bottom: 6px;
+}
+
+.process-content h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: var(--text-primary, #1a1a1a);
+}
+
+.process-content p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--text-secondary, #555);
+    margin: 0;
+}
+
+/* ------------------------------------------
+   Outcome Cards
+   ------------------------------------------ */
+
+.outcome-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.outcome-card {
+    text-align: center;
+    padding: 28px 16px;
+    border-radius: 12px;
+    background: var(--bg-secondary, #f8f8f8);
+    border: 1px solid var(--card-border, #f0f0f0);
+}
+
+.outcome-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent, #2563eb);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.outcome-label {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--text-secondary, #666);
+    line-height: 1.4;
+}
+
+/* ------------------------------------------
+   Responsive — Tablet
+   ------------------------------------------ */
+
+@media (max-width: 1024px) {
+    .menu-card {
+        width: 250px;
+    }
+
+    .menu-card-1 {
+        transform: rotateY(6deg) translateX(16px);
+    }
+
+    .menu-card-3 {
+        transform: rotateY(-6deg) translateX(-16px);
+    }
+
+    .direction-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .outcome-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ------------------------------------------
+   Responsive — Mobile
+   ------------------------------------------ */
+
+@media (max-width: 768px) {
+    .challenge-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .direction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-trifold {
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px 0 48px;
+        perspective: none;
+    }
+
+    .menu-card {
+        width: 100%;
+        max-width: 320px;
+        transform: none !important;
+    }
+
+    .menu-card:hover {
+        transform: translateY(-4px) scale(1.02) !important;
+    }
+
+    .menu-trifold:hover .menu-card:not(:hover) {
+        filter: none;
+    }
+
+    .phone-mockup {
+        width: 260px;
+        height: 520px;
+        border-radius: 36px;
+        padding: 10px;
+    }
+
+    .phone-notch {
+        width: 100px;
+        height: 24px;
+        top: 10px;
+    }
+
+    .phone-screen {
+        border-radius: 28px;
+    }
+
+    .outcome-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .stories-nav-hint {
+        bottom: 16px;
+        font-size: 0.65rem;
+        padding: 5px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .phone-mockup {
+        width: 240px;
+        height: 480px;
+    }
+
+    .outcome-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .outcome-card {
+        padding: 20px 12px;
+    }
+
+    .outcome-number {
+        font-size: 1.8rem;
+    }
+}
+
+/* ------------------------------------------
+   Dark Mode Overrides
+   ------------------------------------------ */
+
+.dark-mode .challenge-card,
+.dark-mode .direction-card,
+.dark-mode .outcome-card {
+    background: var(--bg-secondary, #2a2a2a);
+    border-color: var(--card-border, #333);
+}
+
+.dark-mode .menu-card {
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        0 24px 48px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .menu-card:hover {
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.3),
+        0 48px 80px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .phone-mockup {
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        0 28px 56px rgba(0, 0, 0, 0.35);
+}
+
+.dark-mode .stories-progress-bar {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .stories-nav-hint {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .process-timeline::before {
+    background: var(--border, #444);
+}
+
+.dark-mode .process-marker {
+    border-color: var(--bg-primary, #1a1a1a);
+}
